@@ -1,25 +1,28 @@
-import logo from './logo.svg';
 import './App.css';
+import Mensaje from './Mensaje';
 
+
+
+// un componente = declarar una funcion
+// componente -> parte de la ui que es reutilizable en toda la app
+//const App = () => {} es otra forma de declarar una funcion
 function App() {
+
+  const mensaje = "hello world from variable";
   return (
+
+    //esto por mas que parezca html es jsx (javascript xml) se usa babel para compilar y ahi vemos que es js
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+      <Mensaje message="hola" color="purple"></Mensaje>
+      <Mensaje message="Hola 2" color ="green"/>
+     <p>{mensaje + " ahora estoy en jsx" }</p>
+     <p>{ 2 + 2 + " <-- suma : date -->"+ new Date().toDateString()}</p>
     </div>
+
   );
 }
+
+
 
 export default App;
