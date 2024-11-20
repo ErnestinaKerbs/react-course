@@ -17,9 +17,12 @@ const Contador =() => {
     const handleClick =() => contadorUpdateValue(contadorValue => contadorValue + 1);
     const handleClickReset = () => contadorUpdateValue(0);
 
+    const isEven = contadorValue % 2 === 0;
+
     return (
         <div>
             <h1>Contador: {contadorValue}</h1>
+            <p>{isEven ? "Es par" : "Es impar"}</p>
             <button onClick={handleClick}>Incrementar</button>
             <button onClick={handleClickReset}>Reset</button>
         </div>
