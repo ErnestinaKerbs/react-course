@@ -1,7 +1,7 @@
 import './App.css';
 import Mensaje from './Mensaje';
 import Contador from './Contador';
-
+import UnEstadoParaVariasCosas from './UnEstadoParaVariasCosas';
 
 
 // un componente = declarar una funcion
@@ -22,6 +22,8 @@ function App() {
 
      <h1>Ejemplo uso de hook para actualizar el estado</h1>
      <Contador/>
+
+     <UnEstadoParaVariasCosas/>
     </div>
 
   );
