@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Mensaje from "./Mensaje";
 const Contador =() => {
 
     //hook
@@ -21,7 +22,10 @@ const Contador =() => {
 
     return (
         <div>
-            <h1>Contador: {contadorValue}</h1>
+
+            {/* los componentes se re renderizan cada vez que cambia su estado interno (el caso del hook usado aquí), 
+                o cuando le llegan nuevas props (el caso del componente Mensaje) */}
+            <Mensaje color = {isEven ? "green" : "red"} message = {"Contador: " + contadorValue}></Mensaje>
             <p>{isEven ? "Es par" : "Es impar"}</p>
             <button onClick={handleClick}>Incrementar</button>
             <button onClick={handleClickReset}>Reset</button>
