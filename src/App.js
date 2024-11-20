@@ -1,5 +1,6 @@
 import './App.css';
 import Mensaje from './Mensaje';
+import Contador from './Contador';
 
 
 
@@ -18,6 +19,9 @@ function App() {
       <Mensaje message="Hola 2" color ="green"/>
      <p>{mensaje + " ahora estoy en jsx" }</p>
      <p>{ 2 + 2 + " <-- suma : date -->"+ new Date().toDateString()}</p>
+
+     <h1>Ejemplo uso de hook para actualizar el estado</h1>
+     <Contador/>
     </div>
 
   );
